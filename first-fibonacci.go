@@ -5,12 +5,11 @@ import (
 	"fmt"
 )
 
-func main() {
-
+func Fibonacci(x int) {
 	tmp := []int{0, 1, 0}
 
 	j := 0
-	for i := 1; i < 20; i++ {
+	for i := 1; i < x; i++ {
 		if i+1 < len(tmp) {
 			tmp = append(tmp, tmp[i+1])
 		} else {
@@ -25,4 +24,10 @@ func main() {
 			fmt.Println("Something went wrong here")
 		}
 	}
+}
+
+func main() {
+
+	Fibonacci(15)
+
 }
